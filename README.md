@@ -2,7 +2,7 @@
 In this project, I developed a real-time stock price monitoring system using Python, FastAPI, and RabbitMQ. The goal was to create a dynamic web application that continuously updates stock prices without manual page refreshes.
 
 ## Project Agenda
-- Real-Time Data Retrieval: Fetch stock prices for Apple Inc. from an online API.
+- Real-Time Data Retrieval: Fetch stock prices for Apple Inc. from an hidden API using network tab.
 - Asynchronous Data Processing: Use RabbitMQ to manage and process stock data in real-time.
 - Dynamic Web Display: Build a web interface that automatically refreshes to display the latest stock prices.
 
