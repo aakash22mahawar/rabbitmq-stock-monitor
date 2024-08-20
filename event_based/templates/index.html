@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Stock Price</title>
+</head>
+<body>
+    <h1>Apple Stock Price</h1>
+    <div id="stock-data">
+        <!-- Stock data will be updated here -->
+    </div>
+
+    <script>
+        function fetchStockData() {
+            fetch('/get-stock-price')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('stock-data').innerHTML = `
+                        <p>Price: ${data.price}</p>
+                        <p>Net Change: ${data.net_change}</p>
+                        <p>Percent Change: ${data.percent_change}</p>
+                        <p>Timestamp: ${data.time_stamp}</p>
+                    `;
+                })
+                .catch(error => console.error('Error fetching stock data:', error));
+        }
+
+        // Fetch stock data every 30 seconds
+        setInterval(fetchStockData, 30000);
+
+        // Initial fetch
+        fetchStockData();
+    </script>
+</body>
+</html>
