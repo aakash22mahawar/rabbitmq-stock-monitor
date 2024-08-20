@@ -15,11 +15,6 @@ FastAPI: Implemented a FastAPI application to serve the web interface and API en
 - Created a index.html page that fetches and displays stock data every 30 seconds using JavaScript. This approach eliminates the need for manual page refreshes, offering a seamless user experience.
 - This setup demonstrates the effective use of modern web technologies and message queuing systems to build a responsive and efficient real-time data monitoring application.
 
-## run the app
-1. **Start the Consumer Script:**
-   ```bash
-   python cons.py
-
-2. **Start Fast API in new terminal:**
+## Run the App
    ```bash
    uvicorn app:app --reload
